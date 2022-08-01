@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Email Alert</title>
+</head>
+<body style="display:flex; flex-direction:column; justify-content:center; min-height:100vh;">
+    <div bgcolor="#f6f6f6" style="color: #333; height: 100%; width: 100%;" height="100%" width="100%">
+        <table bgcolor="#f6f6f6" cellspacing="0" style="border-collapse: collapse; padding: 40px; width: 100%;" width="100%">
+            <tbody>
+                <tr>
+                    <td width="5px" style="padding: 0;"></td>
+                    <td style="clear: both; display: block; margin: 0 auto; max-width: 600px; padding: 10px 0;">
+                        <table width="100%" cellspacing="0" style="border-collapse: collapse;">
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 0;">
+                                        <a
+                                            href="https:/fmbn.gov.ng"
+                                            style="color: #348eda;"
+                                            target="_blank"
+                                        >
+                                            <img
+                                                src="https://storage.googleapis.com/thisday-846548948316-wp-data/wp-media/2018/08/97669755-fmbn.jpg"
+                                                alt="Logo"
+                                                style="height: 70px; max-width: 100%; width: 157px; object-fit: cover;"
+                                                height="50"
+                                                width="157"
+                                            />
+                                        </a>
+                                    </td>
+                                    <td style="color: #999; font-size: 16px; padding: 0; text-align: right;" align="left">
+                                        Federal Mortgage Bank of Nigeria<br />
+                                        The Mortgage House,  Abuja
+                                        
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td width="5px" style="padding: 0;"></td>
+                </tr>
+    
+                <tr>
+                    <td width="5px" style="padding: 0;"></td>
+                    <td bgcolor="#FFFFFF" style="border: 1px solid #000; clear: both; display: block; margin: 0 auto; max-width: 600px; padding: 0;">
+                        <table width="100%" style="background: #f9f9f9; border-bottom: 1px solid #eee; border-collapse: collapse; color: #999;">
+                            <tbody>
+                                <tr>
+                                    <td width="50%" style="padding: 20px;"><strong style="color: #333; font-size: 22px;">Dear {0},</strong> </td>
+                                    <td align="right" width="50%" style="padding: 20px;">Thank you for using <span class="il">FMBN</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td style="padding: 0;"></td>
+                    <td width="5px" style="padding: 0;"></td>
+                </tr>
+                <tr>
+                    <td width="5px" style="padding: 0;"></td>
+                    <td style="border: 1px solid #000; border-top: 0; clear: both; display: block; margin: 0 auto; max-width: 600px; padding: 0;">
+                        <table cellspacing="0" style="border-collapse: collapse; margin: 0 auto; max-width: 600px;">
+                            <tbody>
+                                <tr>
+                                    <td valign="top" >
+                                        <h3
+                                            style="
+                                                border-bottom: 1px solid #000;
+                                                color: #000;
+                                                font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+                                                font-size: 18px;
+                                                font-weight: bold;
+                                                line-height: 1.2;
+                                                margin: 0;
+                                                margin-bottom: 15px;
+                                                padding-bottom: 5px;
+                                                width: 560px;
+                                                padding: 20px 20px 10px 20px; 
+                                            "
+                                        >
+                                            Registration
+                                        </h3>
+                                        <table cellspacing="0" style="border-collapse: collapse; margin-bottom: 10px;">
+                                            <tbody>
+                                                <tr>
+                                                    <p style="padding: 0 0 0 20px;">You have registered for your Internet Banking. <br> <br> On approval, kindly validate your account by clicking
+                                                        <a href={1}>here</a>
+                                                       
+                                                        <br> <br/>please use this code {2} for authentication <br> this mail, contact your bank.</p>                                                        
+                                                        <p style="padding: 0 0 0 20px;">Thank you.</p>
+                                                     </p>
+                                                </tr>
+                                                <tr>
+                                                    <!-- <td style="border-bottom: 1px solid #000; font-weight: bold; padding: 5px 0; margin-top: 0px;"></td>
+                                                    <td align="left" style="border-bottom: 1px solid #000;  font-weight: bold; padding: 5px 15px; margin-top: 0px; width: 400px;"></td> -->
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td width="5px" style="padding: 0;"></td>
+                </tr>
+    
+                <tr style="color: #666; font-size: 12px;">
+                    <td width="5px" style="padding: 10px 0;"></td>
+                    <td style="clear: both; display: block; margin: 0 auto; max-width: 600px; padding: 10px 0;">
+                        <table width="100%" cellspacing="0" style="border-collapse: collapse;">
+                            <tbody>
+                                <tr>
+                                    <td width="90%" valign="top" style="padding: 10px 0px 70px 0px;">
+                                        <h4 style="margin: 0;">Not you?</h4>
+                                        <p style="color: #666; font-size: 12px; font-weight: normal; margin-bottom: 10px;">
+                                            <strong> NOTICE:</strong> This E-mail, including attachments, is the property of the FMBN. 
+                                            The contents of this E-mail are protected by Federal Regulations.
+                                    
+                                             If you are not the intended recipient, any retention, dissemination, distribution or copying of this communication is strictly prohibited by Federal law. 
+                                             Please reply to the sender that you have received the E-mail message in error, and then delete the E-mail message. You can contact our
+                                            <a
+                                                href="https://fmbn.gov.ng/Contact/contact-us.html"
+                                                style="color: #666;"
+                                                target="_blank"
+                                            >
+                                                Support Center
+                                            </a>
+                                            with for more information.
+                                        </p>
+                                    </td>
+                                    <td width="10%" style="padding: 10px 0;">&nbsp;</td>
+                                    <td width="40%" valign="top" style="padding: 10px 0; "align="left">
+                                        
+                                        <h4 style="margin: 0;"><span class="il">Federal Mortgage Bank of Nigeria</span> </h4>
+                                        <p style="color: #666; font-size: 12px; font-weight: normal; margin-bottom: 10px;">
+                                            <a href="#">The Mortgage House, 266 Tafawa Balewa Rd, Central Business Dis 900103, Abuja</a>
+                                            <img align="right" src="https://i0.wp.com/newsonlineng.com/wp-content/uploads/2022/03/242105795_153346956961290_3888255758340745986_n.jpg?resize=696%2C258&ssl=1" alt="Family"  style="margin-bottom: 10px;
+                                        
+                                        margin-left: 0px;
+                                        margin-right: 50px;
+                                        margin-top: 5px;
+                                        object-fit: cover;
+                                        width: 300px;
+                                        height: 120px;">
+                                        </p>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                    <td width="5px" style="padding: 10px 0;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</body>
+</html>

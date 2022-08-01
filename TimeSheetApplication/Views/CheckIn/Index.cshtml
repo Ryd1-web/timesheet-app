@@ -1,0 +1,131 @@
+﻿@{
+    ViewData["Title"] = "TIMESHEET SETUP";
+}
+
+@section pagedescription{
+    <h7> TIMESHEET MANAGEMENT MODULE  </h7>
+
+}
+@{
+    
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card card-plain">
+    <div class="card-header text-center">
+        <h4 class="card-title">CLOCK IN AND CLOCK OUT</h4>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="card card-plain">
+                <div class="card-body">
+                    <div id="timesheet-toolbar">
+                        <button class="btn btn-info" id="btnCheckIn"
+                                onclick="openCheckInModal()">
+                            <i class="now-ui-icons ui-1_simple-add"></i>
+                            Clock In
+                        </button>
+                    </div>
+                    <table id="typeTable" data-toggle="table"
+                           data-url="@Url.Action("ListTimeSheet", "CheckIn")"
+                           data-search="true" class="data-table"
+                           data-toolbar="#timesheet-toolbar"
+                           data-search-align="right"
+                           data-page-size="25"
+                           data-page-list="[25, All]"
+                           data-show-pagination-switch="true"
+                           data-mobile-responsive="true"
+                           data-show-refresh="true"
+                           data-show-toggle="true"
+                           data-buttons-class="danger">
+                        <thead>
+                            <tr>
+                               
+                                <th data-field="userid" data-visible="false" data-sortable="true">UserId</th>
+                                <th data-field="staffNo" data-sortable="true">Staff Number</th>
+                                <th data-field="username" data-sortable="true">Username</th>
+                                <th data-field="timeLoggedIn" data-sortable="true">TimeLogged In</th>
+                                <th data-field="timeLoggedOut" data-sortable="true">TimeLogged Out</th>
+                                <th data-field="status" data-sortable="true">Status</th>
+
+                                <th data-events="timeSheetEvents" data-formatter="editTimeFormatter"
+                                    data-align="center" data-width="5%"></th>
+                                <th data-events="timeSheetEvents" data-formatter="deleteTimeFormatter"
+                                    data-align="center" data-width="5%"></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Add modal and forms here -->
+<div id="AddNewCheckIn" class="modal fade" role="dialog" aria-hidden="true" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg" style="width:500px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="card-title text-primary font-weight-bold w-100 ml-3 mb-3" style="text-align:center;">
+                    <span id="timeSheetTitle"></span> EMPLOYEE CHECK IN/OUT
+                </h2>
+                <button type="button" class="close" data-dismiss="modal" id="closeboard" name="closeboard">&times;</button>
+                @*<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="now-ui-icons ui-1_simple-remove"></i>
+                    </button>*@
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row justify-content-center">
+                        <div class="col">
+                            <form id="frmtype" method="post">
+                                <input type="hidden" name="id" id="id" />
+                                <div>
+                                    <label class="col-md-4 col-form-label">Staff Number</label>
+                                    <div class="col-md-8">
+                                        <div class="form-group">
+                                            <input name="staffNo" id="staffNo" type="text" class="form-control" required style="width:410px" />
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-4 justify-content-between">
+                                    <div class="col">
+                                        <button class="btn btn-danger btn-wd pull-left" type="reset">Clear</button>
+                                    </div>
+                                    <div class="col">
+                                        <button class="btn btn-info btn-wd pull-right" onclick="AddTimeSheet()" type="submit"
+                                                id="btnAddcheckIn">
+                                            CheckIn
+                                        </button>
+                                        <button class="btn btn-info btn-wd pull-right" type="button"
+                                                id="btncheckInUpdate">
+                                            Update Record
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@section Scripts {
+    <environment include="Development">
+        <script src="~/js/modules/ClockIn.js"></script>
+
+    </environment>
+    <environment exclude="Development">
+
+        <script src="~/js/modules/ClockIn.min.js"></script>
+    </environment>
+}

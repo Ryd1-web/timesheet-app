@@ -1,0 +1,256 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="~/img/lafarge_africa_logo_1.png">
+    <link rel="icon" type="image/png" href="~/img/lafarge_africa_logo_1.png">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no" name="viewport" />
+    <title> LARFARGE CEMENT @ViewData["Title"]</title>
+    <environment include="Development">
+        <link href="~/css/Montserrat.css" rel="stylesheet" />
+        <link href="~/css/all.css" rel="stylesheet" />
+        <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/css/bootstraptable/bootstrap-table.css" rel="stylesheet" />
+        <link href="~/css/now-ui-dashboard.css" rel="stylesheet" />
+        <link href="~/css/webfonts/now-ui-dashboard.minf700.css" rel="stylesheet" />
+        <link href="~/css/fontawesome/css/all.css" rel="stylesheet" />
+        @*<link href="~/css/now-ui-dashboard.minf700.css" rel="stylesheet" />*@
+        <link href="~/css/pace/red/pace-theme-material.css" rel="stylesheet" />
+        <link href="~/css/fileinput.css" rel="stylesheet" />
+        <link href="~/css/select2/select2.css" rel="stylesheet" />
+        <link href="~/css/select2/select2-bootstrap4.css" rel="stylesheet" />
+        <link href="~/css/site.css" rel="stylesheet" />
+        <link href="~/css/passwordcheck.css" rel="stylesheet" />
+        <link href="~/css/logostyle.css" rel="stylesheet" />
+    </environment>
+    <environment exclude="Development">
+        <link href="~/css/Montserrat.min.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/all.min.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/bootstrap.min.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/now-ui-dashboard.css" rel="stylesheet" />
+        <link href="~/css/webfonts/now-ui-dashboard.minf700.css" rel="stylesheet" />
+        <link href="~/css/pace/red/pace-theme-material.css" rel="stylesheet" />
+        <link href="~/css/fontawesome/css/all.css" rel="stylesheet" />
+        <link href="~/css/fileinput.min.css" rel="stylesheet" />
+        <link href="~/css/bootstraptable/bootstrap-table.min.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/site.min.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/select2/select2.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/select2/select2-bootstrap4.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/passwordcheck.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/css/logostyle.css" rel="stylesheet" asp-append-version="true" />
+    </environment>
+    @RenderSection("Styles", false)
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar" data-color="green">
+            <!--
+                Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+            -->
+            <div class="logo">
+                <a href="https://www.lafarge.com.ng/" class="simple-text logo-normal text-lg-center" style="font-size:medium">
+                    LAFARGE AFRICA.
+                </a>
+                <div class="navbar-minimize">
+                    <button id="minimizeSidebar" class="btn btn-icon btn-neutral btn-round btn-simple">
+                        <i class="now-ui-icons text_align-center visible-on-sidebar-regular"></i>
+                        <i class="design_bullet-list-67 now-ui-icons visible-on-sidebar-mini"></i>
+                    </button>
+                </div>
+
+            </div>
+            <div class="sidebar-wrapper">
+
+                <div class="user">
+                    <div class="photo2">
+                        <img src="~/Scripts/assets/img/lafarge_africa_logo_1.png" width="250" height="80" class="img-responsive" />
+
+                    </div>
+
+                </div>
+
+                <ul class="nav">
+                    <li class="active">
+
+
+                        <a asp-controller="StatusDashboard" asp-action="Index">
+
+                            <i class="now-ui-icons design_app"></i>
+
+                            <p>Dashboard</p>
+                        </a>
+
+                    </li>
+
+                    @{
+
+                        <li>
+
+                            <div class="collapse show" id="navProfiling">
+                                <ul class="nav">
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a asp-controller="CheckIn" asp-action="Index">
+                                <i class="design_app now-ui-icons"></i>
+                                <p>Check In</p>
+                            </a>
+                        </li>
+
+                        <li>
+
+                        </li>
+                    }
+
+                    <li class="active">
+
+                        <div class="collapse show" id="navstatement">
+
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="bg-primary fixed-top navbar navbar-absolute navbar-expand-lg navbar-transparent">
+                <div class="container-fluid">
+                    <div class="navbar-wrapper">
+                        <div class="navbar-toggle">
+                            <button type="button" class="navbar-toggler">
+                                <span class="bar1 navbar-toggler-bar"></span>
+                                <span class="bar2 navbar-toggler-bar"></span>
+                                <span class="bar3 navbar-toggler-bar"></span>
+                            </button>
+                        </div>
+                    </div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-kebab navbar-toggler-bar"></span>
+                        <span class="navbar-kebab navbar-toggler-bar"></span>
+                        <span class="navbar-kebab navbar-toggler-bar"></span>
+                    </button>
+                    <div class="collapse justify-content-end navbar-collapse" id="navigation">
+                        <ul class="navbar-nav">
+                            <li class="">
+                                <form method="post"asp-controller="CheckIn" asp-action="logout">
+                                    <button type="submit">
+                                        Logout
+                                    </button>
+                                     
+                                   
+                                </form>
+                              
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- End Navbar Ref-->
+            <div class="panel-header text-center" data-color="green" style="background: #184226; text-align: center; height: 60px; color: white; align-content: center;">
+                <div class="header mb-0">
+                    <div class="row text-center">
+
+                    </div>
+                    @RenderSection("pagedescription", false)
+                </div>
+            </div>
+            <div class="content">
+             
+
+                @RenderBody()
+            </div>
+            <footer class="footer">
+                <div class="container-fluid">
+                    <div class="border-top footer text-muted">
+                        <p class="text-center">
+                            Copyrights &copy;
+                            <script>document.write(new Date().getFullYear())</script>&nbsp;Lafarge Africa Plc | All Rights Reserved
+                        </p>
+                    </div>
+
+
+                </div>
+            </footer>
+        </div>
+    </div>
+    <environment include="Development">
+        <script src="~/js/plugins/aes.js"></script>
+        <script src="~/js/plugins/sjcl.js"></script>
+        <script src="~/js/core/jquery.min.js"></script>
+        <script src="~/js/core/popper.min.js"></script>
+        <script src="~/js/core/bootstrap.min.js"></script>
+        <script src="~/js/select2/select2.mod.js"></script>
+        <script src="~/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+        <script src="~/js/plugins/moment.min.js"></script>
+        <script src="~/js/plugins/bootstrap-switch.js"></script>
+        <script src="~/js/plugins/sweetalert2.min.js"></script>
+        <script src="~/js/plugins/jquery.validate.min.js"></script>
+        <script src="~/js/plugins/jquery.bootstrap-wizard.js"></script>
+        <script src="~/js/plugins/bootstrap-selectpicker.js"></script>
+        <script src="~/js/plugins/bootstrap-datetimepicker.js"></script>
+        <script src="~/js/plugins/perfect-scrollbar.min.js"></script>
+        <script src="~/js/bootstraptable/bootstrap-table.min.js"></script>
+        <script src="~/js/bootstraptable/mobile/bootstrap-table-mobile.js"></script>
+        <script src="~/js/plugins/bootstrap-tagsinput.js"></script>
+        <script src="~/js/plugins/jasny-bootstrap.min.js"></script>
+        <script src="~/js/plugins/fullcalendar.min.js"></script>
+        <script src="~/js/plugins/jquery-jvectormap.js"></script>
+        <script src="~/js/plugins/nouislider.min.js"></script>
+        <script src="~/js/modules/ClockIn.js"></script>
+        <script src="~/js/plugins/buttons.js"></script>
+        <script src="~/js/plugins/chartjs.min.js"></script>
+        <script src="~/js/plugins/bootstrap-notify.js"></script>
+        <script src="~/js/modules/accountType.js"></script>
+        @*<script src="~/js/now-ui-dashboard.minf700.js"></script>*@
+        <script src="~/js/bootstrap-fileinput/fileinput.js"></script>
+        <script src="~/js/bootstrap-fileinput/themes/fas/theme.js"></script>
+        <script src="~/js/pace.js"></script>
+
+    </environment>
+    <environment exclude="Development">
+        <script src="~/js/plugins/aes.js"></script>
+        <script src="~/js/plugins/sjcl.js"></script>
+        <script src="~/js/core/jquery.min.js"></script>
+        <script src="~/js/modules/accountType.js"></script>
+        <script src="~/js/modules/ClockIn.js"></script>
+        <script src="~/js/core/popper.min.js"></script>
+        <script src="~/js/core/bootstrap.min.js"></script>
+        <script src="~/js/select2/select2.mod.js"></script>
+        <script src="~/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+        <script src="~/js/plugins/moment.min.js"></script>
+        <script src="~/js/plugins/bootstrap-switch.js"></script>
+        <script src="~/js/plugins/sweetalert2.min.js"></script>
+        <script src="~/js/plugins/jquery.validate.min.js"></script>
+        <script src="~/js/plugins/jquery.bootstrap-wizard.js"></script>
+        <script src="~/js/plugins/bootstrap-selectpicker.js"></script>
+        <script src="~/js/plugins/bootstrap-datetimepicker.js"></script>
+        <script src="~/js/plugins/perfect-scrollbar.min.js"></script>
+        <script src="~/js/bootstraptable/bootstrap-table.min.js"></script>
+        <script src="~/js/bootstraptable/mobile/bootstrap-table-mobile.min.js"></script>
+        <script src="~/js/plugins/bootstrap-tagsinput.js"></script>
+        <script src="~/js/plugins/jasny-bootstrap.min.js"></script>
+        <script src="~/js/plugins/fullcalendar.min.js"></script>
+        <script src="~/js/plugins/jquery-jvectormap.js"></script>
+        <script src="~/js/plugins/nouislider.min.js"></script>
+        <script src="~/js/plugins/buttons.js"></script>
+        <script src="~/js/plugins/chartjs.min.js"></script>
+        <script src="~/js/plugins/bootstrap-notify.js"></script>
+
+        @*<script src="~/js/now-ui-dashboard.minf700.js"></script>*@
+        <script src="~/js/bootstrap-fileinput/fileinput.min.js"></script>
+        <script src="~/js/bootstrap-fileinput/themes/fas/theme.min.js"></script>
+        <script src="~/js/pace.js"></script>
+
+    </environment>
+    @RenderSection("Scripts", false)
+</body>
+</html>

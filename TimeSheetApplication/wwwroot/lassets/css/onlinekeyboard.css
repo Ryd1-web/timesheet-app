@@ -1,0 +1,30 @@
+﻿/* override bootstrap active state */
+button.btn-default:active {
+	background-color: #FFF;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+button.btn-default:active:hover {
+	background-color: #3276B1;
+}
+/* override Bootstrap excessive button padding */
+button.ui-keyboard-button.btn {
+	padding: 1px 6px;
+}
+/* Bootswatch Darkly input is too bright 
+.ui-keyboard-input.light, .ui-keyboard-preview.light { color: #222; background: #ddd; }
+.ui-keyboard-input.dark, .ui-keyboard-preview.dark { color: #ddd; background: #222; }*/
+
+.block { width: 270px; display: inline-block; height: 170px; margin: 15px; padding-bottom: 30px; text-align: center; vertical-align: top; position:sticky; }
+
+/*.ui-keyboard {
+  border-radius: 0;
+  left: 0;
+  top: auto;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+}
+.ui-keyboard:active:hover {
+	background-color: #3276B1;
+}*/
